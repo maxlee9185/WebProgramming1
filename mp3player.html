@@ -1,0 +1,89 @@
+<!DOCTYPE=html>
+
+<html>
+    <head>
+        <title>Video Player</title>
+        <style>
+            #sound
+            {
+                width: :500px;  
+            }
+            table{
+                border: 1px solid blue;
+                border-collapse: collapse;
+                width: 500;
+            }
+            tr,th,td
+            {
+                border: 1px solid blue;
+            }
+            th
+            {
+                background-color: azure;
+            }
+        </style>
+        <script>
+            var player;
+            window.onload=function()
+            {
+                player=document.getElementById("sound");
+                document.getElementById("btnPlay").addEventListener("click",playMusic,false);
+                document.getElementById("btnPause").addEventListener("click",pauseMusic, false);
+                document.getElementById("btnStop").addEventListener("click",stopMusic,false);
+            }
+            
+            function playMusic()
+            {
+                player.play();
+            }
+            function pauseMusic()
+            {
+                player.pause();
+            }
+            function stopMusic()
+            {
+                player.pause();
+                player.currentTime=0;
+            }
+        </script>
+    </head>
+    <body>
+        <video id='sound' controls="controls">
+            <source src="images/panda.mp4"/>
+        </video>
+        <button id="btnPlay">Play</button>
+        <button id="btnPause">Pause</button>
+        <button id="btnStop">Stop</button>
+        <table>
+            <tr>
+                <th>City-Table Header</th><th>Airport</th><th>Airline Hubs</th>
+            </tr>
+            <tr>
+                <td>NewYork</td><td>JFK</td><td>jetBlue </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Dallas</td><td>Dallas Love</td><td>Southwest</td>
+            </tr>
+            <tr>
+                <td>Dfw</td><td>American Airlines</td>
+            </tr>
+            <tr>
+                <td>Chicago</td><td>O'Hare</td><td>United</td>
+            </tr>
+            <tr>
+                <td>Atlanta</td><td>Atlanta Int'l</td><td>Delta</td>
+            </tr>
+            <tr>
+                <td colspan="2">Atlanta</td><td>Delta</td>
+            </tr>
+            <tr>
+                <td>San Francisco</td><td>San Francisco Intl</td><td>Delta</td>
+            </tr>
+            <tr>
+                <td>Salt Lake City</td><td>Salt Lake City Int'l</td><td>United</td>
+            </tr>
+        </table>
+        
+    </body>
+    
+</html>

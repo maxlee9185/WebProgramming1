@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Input</title>
+        <style>
+            label
+            {
+                font-family: sans-serif;
+                font-size: 0.85em;
+                font-weight: bold;
+            }
+            form
+            {
+                border: 1px solid blue;
+                padding: 5px;
+                background-color: antiquewhite;
+            }
+            input, textarea, select
+            {
+                font-family:fantasy,cursive;
+                font-size: .68em;
+                background-color: beige;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>All about Me</h1>
+        <form method="POST" action="#">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"/><br/>
+            <label for="email"> Email Address</label>
+            <input type="text" id="email" name="email"/><br/>
+            <label for="lifeStory">Life Story</label><br/>
+            <textarea id="lifeStory" for="lifeStory" cols="50" rows="5">Type your life story here...
+            </textarea><br/>
+            <label for="DOB">Date of Birth</label>
+            <input type="date" id="DOB" name="DOB"/><br/>
+            <label for="favoriteColor">Favorite Color</label>
+            <input type="color" id="favoriteColor" name="favoriteColor"/>
+            <label for="favoriteAirline">Favorite Airline</label><br/>
+            <select id="favoriteAirline" name="favoriteAirline" size="4">
+                <option value="American">American Airlines</option>
+                <option value="Delta">Delta Airlines</option>
+                <option value="Southwest">Southwest Airlines</option>
+                <option value="jetBlue">jetBlue</option>
+                <option value="virgin">Virgin America</option>
+            </select><br/>
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button><br/>
+            <input type="radio" name="sex" id="sex" value="male" checked>Male<br/>
+            <input type="radio" name="sex" id="sex" value="female" >Female<br/>
+            <p>Please pick your favorite bands</p>
+            <input type="checkbox" name="bands" id="bands" value="journey">Journey<br/>
+            <input type="checkbox" name="bands" id="bands" value="reo">reo<br/>
+            <input type="checkbox" name="bands" id="bands" value="bts">bts<br/>
+            <input type="checkbox" name="bands" id="bands" value="blackpink">blackpink<br/>
+            <input type="checkbox" name="bands" id="bands" value="kansas">kansas<br/>
+            <input type="checkbox" name="bands" id="bands" value="asdf">asdf<br/>
+        </form>
+        <button id="StartButton">Start</button>
+    </body>
+</html>
